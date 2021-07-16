@@ -74,8 +74,8 @@ echo '<br>';
 echo '<p> SESTA UZDUOTIS </p>';
 echo '<br>';
 $America1 = 'An American in Paris';
-$sub1 = 'a';
-
+$America1 = substr_count(strtolower($America1), strtolower("a"));
+echo $America1;
 
 echo '<br>';
 echo '<br>';  
