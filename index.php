@@ -43,7 +43,7 @@ echo '<br>';
 $vardenis = "Antanas";
 $pavardenis = "Naktis";
 
-$Mixas = $vardenis[0] . $pavardenis[0];
+$Mixas = substr($vardenis,0,1) . substr($pavarde,0,1);
 echo $Mixas;  
 
 echo '<br>';
@@ -54,7 +54,7 @@ echo '<br>';
 
 $Vardas1 = "Kestas";
 $Pavarde1 = "Zaibas";
-$Mixas1 = substr($Vardas1, 3) . substr($Pavarde1, 3);
+$Mixas1 = substr($Vardas1, -3) . substr($Pavarde1, -3);
 
 echo $Mixas1;
 
@@ -132,9 +132,8 @@ echo '<br>';
 $str1 = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
 echo $str1;
 echo '<br>';
-$str = substr($str1, strpos($str1, 'Episode '));
-$array = explode(" ", $str);
-echo $array[1];
+$str = substr($str1, -14 , 1);
+echo $str;
 
 //////////////////DEVINTA UZDUOTIS//////////////
 echo '<p> DEVINTA UZDUOTIS </p>';
@@ -161,7 +160,7 @@ $count = 0;
 
 for ($i=0; $i < count($ArrayFraze2) ; $i++) {
     $FrazeCount2 = $ArrayFraze2[$i];
-   if(strlen($FrazeCount2) <= 5) {
+   if(mb_strlen($FrazeCount2) <= 5) {
        ++$count;
    }
  }
