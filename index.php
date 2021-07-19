@@ -60,7 +60,7 @@ echo $Mixas1;
 
 echo '<br>';
 echo '<br>';  
-//////////////////PENKTA UZDUOTIS//////////////
+//////////////////PENKTA UZDUOTIS/////////////
 echo '<p> PENKTA UZDUOTIS </p>';
 echo '<br>';
 
